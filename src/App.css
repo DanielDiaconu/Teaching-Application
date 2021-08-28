@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.ql-editor {
+  min-height: 200px !important;
+  padding-left: 15px;
+  color: #18113c;
+}
+
+.border-transparent {
+  border: 1px solid transparent !important;
+}
