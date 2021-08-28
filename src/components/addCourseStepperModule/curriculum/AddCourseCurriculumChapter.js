@@ -2,39 +2,35 @@ import React from "react";
 import { useState } from "react";
 import AddCourseCurriculumSection from "./AddCourseCurriculumSection";
 import { v4 as uuidv4 } from "uuid";
+import AddCourseCurriculumAddSection from "./AddCourseCurriculumAddSection";
 
-export default function AddCourseCurriculumChapter({ chapter }) {
+export default function AddCourseCurriculumChapter({
+  chapter,
+  onChapterUpdate,
+}) {
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
-  const [section, setSection] = useState({
-    id: uuidv4(),
-    title: "",
-    length: 0,
-  });
-  const [sections, setSections] = useState([]);
+  const [isAdding, setIsAdding] = useState(false);
 
-  const onSectionChange = (e) => {
-    setSection({ ...section, id: uuidv4(), [e.target.name]: e.target.value });
-  };
-
-  console.log(chapter);
-
-  const onSectionSave = () => {
-    setIsEditing(false);
-    setSections([...sections, section]);
-    setSection({
-      title: "",
-      length: 0,
-    });
-  };
-
-  const isDisabled = () => {
-    return !section.title || !section.length;
+  const newSectionAdd = (section) => {
+    setIsAdding(false);
+    onChapterUpdate(chapter.id, [...chapter.sections, section]);
   };
 
   const removeAddedSection = (id) => {
-    const filteredSections = sections.filter((section) => section.id !== id);
-    setSections(filteredSections);
+    const filteredSections = chapter.sections.filter(
+      (section) => section.id !== id
+    );
+    onChapterUpdate(chapter.id, filteredSections);
+  };
+
+  const editSection = (section) => {
+    const newSections = chapter.sections.map((item) => {
+      if (item.id === section.id) {
+        return { ...section };
+      }
+      return item;
+    });
+    onChapterUpdate(chapter.id, newSections);
   };
 
   return (
@@ -63,47 +59,22 @@ export default function AddCourseCurriculumChapter({ chapter }) {
           id={`chapter-${chapter.id}`}
           data-bs-parent="#courseAccordion"
         >
-          {!isEditing &&
-            sections.map((section) => (
-              <div className="pt-3 pb-2">
-                <AddCourseCurriculumSection
-                  key={section.id}
-                  section={section}
-                  handleDeleteAddedSection={removeAddedSection}
-                />
-              </div>
-            ))}
-          {isEditing ? (
-            <div className="mt-5" style={{ width: "30%" }}>
-              <label className="form-label">Section Title</label>
-              <input
-                className="form-control"
-                onChange={onSectionChange}
-                value={section.title}
-                name="title"
-                type="text"
+          {chapter.sections.map((section, i) => (
+            <div className="pt-3 pb-2">
+              <AddCourseCurriculumSection
+                key={i}
+                section={section}
+                handleDeleteAddedSection={removeAddedSection}
+                handleEditSection={editSection}
               />
-              <label className="form-label">Length</label>
-              <input
-                className="form-control"
-                onChange={onSectionChange}
-                value={section.length}
-                name="length"
-                type="number"
-                min="0"
-              />
-              <button
-                disabled={isDisabled()}
-                class="btn btn-outline-primary btn-sm mt-2"
-                onClick={onSectionSave}
-              >
-                Save
-              </button>
             </div>
+          ))}
+          {isAdding ? (
+            <AddCourseCurriculumAddSection sectionAddData={newSectionAdd} />
           ) : (
             <button
               class="btn btn-outline-primary btn-sm "
-              onClick={() => setIsEditing(true)}
+              onClick={() => setIsAdding(true)}
             >
               Add Section
             </button>

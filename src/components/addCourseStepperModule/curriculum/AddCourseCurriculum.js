@@ -1,22 +1,29 @@
 import React, { useState } from "react";
 import AddCourseCurriculumChapter from "./AddCourseCurriculumChapter";
 import { v4 as uuidv4 } from "uuid";
+import AddCourseCurriculumAddChapter from "./AddCourseCurriculumAddChapter";
 
-export default function AddCourseCurriculum() {
+export default function AddCourseCurriculum({ onNewCourseChapterChange }) {
   const [chapters, setChapters] = useState([]);
-  const [chapter, setChapter] = useState(initChapters);
-  const [isEditing, setIsEditing] = useState(false);
+  const [isAdding, setIsAdding] = useState(false);
 
-  const onChapterTitleChange = (e) => {
-    setChapter({ ...chapter, [e.target.name]: e.target.value });
+  const onChapterSectionsUpdate = (id, sections) => {
+    const newChapters = chapters.map((chp) => {
+      if (chp.id === id) {
+        return { ...chp, sections };
+      }
+      return chp;
+    });
+    onNewCourseChapterChange(newChapters);
+    setChapters(newChapters);
   };
 
-  const onChaperSave = () => {
-    setIsEditing(false);
-    setChapters([...chapters, chapter]);
+  const onNewChapterAdd = (chapter) => {
+    const payload = [...chapters, chapter];
+    setChapters(payload);
+    onNewCourseChapterChange(payload);
+    setIsAdding(false);
   };
-
-  console.log(chapters);
 
   return (
     <div>
@@ -26,31 +33,18 @@ export default function AddCourseCurriculum() {
         </div>
         <div class="card-body ">
           {chapters.map((chap) => (
-            <AddCourseCurriculumChapter chapter={chap} key={chap.id} />
+            <AddCourseCurriculumChapter
+              chapter={chap}
+              key={chap.id}
+              onChapterUpdate={onChapterSectionsUpdate}
+            />
           ))}
-          {isEditing ? (
-            <div className="d-flex flex-column " style={{ width: "40%" }}>
-              <label className="form-label">Chapter Title</label>
-              <input
-                className="form-control"
-                type="text"
-                name="title"
-                value={chapter.title}
-                placeholder="Enter Chapter Title"
-                onChange={onChapterTitleChange}
-              />
-              <button
-                onClick={onChaperSave}
-                class="btn btn-outline-primary btn-sm mt-5"
-              >
-                {" "}
-                Save
-              </button>
-            </div>
+          {isAdding ? (
+            <AddCourseCurriculumAddChapter onChapterAdd={onNewChapterAdd} />
           ) : (
             <>
               <button
-                onClick={() => setIsEditing(true)}
+                onClick={() => setIsAdding(true)}
                 class="btn btn-outline-primary btn-sm mt-5"
               >
                 Add Chapter
@@ -62,27 +56,3 @@ export default function AddCourseCurriculum() {
     </div>
   );
 }
-
-const initChapters = [
-  {
-    id: uuidv4(),
-    title: "",
-    sections: [
-      {
-        id: uuidv4(),
-        title: "",
-        length: 0,
-      },
-      {
-        id: uuidv4(),
-        title: "",
-        length: 0,
-      },
-      {
-        id: uuidv4(),
-        title: "",
-        length: 0,
-      },
-    ],
-  },
-];

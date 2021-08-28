@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  Stepper,
-  Step,
-  StepLabel,
-  Button,
-  StepButton,
-} from "@material-ui/core";
+import { Stepper, Step, StepLabel } from "@material-ui/core";
 import AddCourseHeader from "../components/addCourseStepperModule/AddCourseHeader";
 import AddCourseBasicInformation from "../components/addCourseStepperModule/AddCourseBasicInformation";
 import AddCourseMedia from "../components/addCourseStepperModule/AddCourseMedia";
@@ -34,6 +28,10 @@ function AddCourse() {
 
   const onNewCourseThumbnailChange = (thumbnail) => {
     setNewCourse({ ...newCourse, thumbnail });
+  };
+
+  const onNewCourseChaptersChange = (chapters) => {
+    setNewCourse({ ...newCourse, chapters });
   };
 
   console.log(newCourse);
@@ -69,7 +67,11 @@ function AddCourse() {
                     onThumbnailChange={onNewCourseThumbnailChange}
                   />
                 )}
-                {activeStep === 2 && <AddCourseCurriculum />}
+                {activeStep === 2 && (
+                  <AddCourseCurriculum
+                    onNewCourseChapterChange={onNewCourseChaptersChange}
+                  />
+                )}
 
                 <div className="d-flex flex-row-reverse justify-content-between my-5">
                   {activeStep <= 1 ? (
