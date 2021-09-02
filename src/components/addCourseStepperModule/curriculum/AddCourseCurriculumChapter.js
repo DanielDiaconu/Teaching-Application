@@ -62,7 +62,7 @@ export default function AddCourseCurriculumChapter({
           {chapter.sections.map((section, i) => (
             <div className="pt-3 pb-2">
               <AddCourseCurriculumSection
-                key={i}
+                key={chapter.id}
                 section={section}
                 handleDeleteAddedSection={removeAddedSection}
                 handleEditSection={editSection}
@@ -73,7 +73,7 @@ export default function AddCourseCurriculumChapter({
             <AddCourseCurriculumAddSection sectionAddData={newSectionAdd} />
           ) : (
             <button
-              class="btn btn-outline-primary btn-sm "
+              class="btn btn-outline-primary btn-sm  mt-5"
               onClick={() => setIsAdding(true)}
             >
               Add Section

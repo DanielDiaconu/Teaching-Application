@@ -1,11 +1,12 @@
 import React from "react";
+import parse from "html-react-parser";
 
 function CourseDescription({ courseDescription }) {
   return (
     <>
       <div className="mb-4">
         <h3 className="mb-2">Course Descriptions</h3>
-        <p>{courseDescription}</p>
+        <div>{parse(courseDescription)}</div>
       </div>
       <h4 className="mb-3">What you’ll learn</h4>
       <div className="row mb-3">

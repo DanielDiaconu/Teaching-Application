@@ -30,7 +30,7 @@ function AddCourseCurriculumAddSection({ sectionAddData }) {
       <div className="mt-5" style={{ width: "30%" }}>
         <label className="form-label">Section Title</label>
         <input
-          className="form-control"
+          className="form-control form-control-sm"
           onChange={onAddChange}
           value={section.title}
           name="title"
@@ -38,7 +38,7 @@ function AddCourseCurriculumAddSection({ sectionAddData }) {
         />
         <label className="form-label">Length</label>
         <input
-          className="form-control"
+          className="form-control form-control-sm"
           onChange={onAddChange}
           value={section.length}
           name="length"

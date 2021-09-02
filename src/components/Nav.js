@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 import NavAvatar from "./navModule/NavAvatar";
 
 function Nav() {
-  const user = sessionStorage.getItem("user");
+  const user = JSON.parse(sessionStorage.getItem("user"));
 
   return (
     <nav className="navbar navbar-expand-lg navbar-default">
       <div className="container-fluid px-0">
-        <a className="navbar-brand" href="./index.html">
+        <Link to="/" className="navbar-brand">
           <img src={Logo} alt="" />
-        </a>
+        </Link>
         <button
           className="navbar-toggler collapsed"
           type="button"
@@ -33,11 +33,7 @@ function Nav() {
                 Courses
               </Link>
             </li>
-            <li className="navbar-item mr-15">
-              <Link className="nav-links-style" to="/blogs">
-                Blogs
-              </Link>
-            </li>
+
             <li className="navbar-item mr-15">
               <Link className="nav-links-style" to="/">
                 Home
@@ -48,11 +44,13 @@ function Nav() {
                 User
               </Link>
             </li>
-            <li className="navbar-item mr-15">
-              <Link className="nav-links-style" to="/addcourse">
-                Add Course
-              </Link>
-            </li>
+            {user && (
+              <li className="navbar-item mr-15">
+                <Link className="nav-links-style" to="/addcourse">
+                  Add Course
+                </Link>
+              </li>
+            )}
           </ul>
 
           <div

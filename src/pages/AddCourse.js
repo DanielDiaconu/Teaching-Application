@@ -4,9 +4,15 @@ import AddCourseHeader from "../components/addCourseStepperModule/AddCourseHeade
 import AddCourseBasicInformation from "../components/addCourseStepperModule/AddCourseBasicInformation";
 import AddCourseMedia from "../components/addCourseStepperModule/AddCourseMedia";
 import AddCourseCurriculum from "../components/addCourseStepperModule/curriculum/AddCourseCurriculum";
+import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
+import { Prompt, useHistory } from "react-router";
+
 function AddCourse() {
   const [activeStep, setActiveStep] = useState(0);
   const [newCourse, setNewCourse] = useState(null);
+  const history = useHistory();
+  const user = JSON.parse(sessionStorage.getItem("user"));
 
   const nextStep = () => {
     if (activeStep >= 3) {
@@ -34,9 +40,66 @@ function AddCourse() {
     setNewCourse({ ...newCourse, chapters });
   };
 
-  console.log(newCourse);
+  const calculateCourseRuntime = () => {
+    const chaptersTime = newCourse.chapters.map((chp) => {
+      return chp.sections.reduce(
+        (total, acc) => total + parseInt(acc.length),
+        0
+      );
+    });
+    return chaptersTime.reduce((total, acc) => total + acc, 0);
+  };
+
+  const submitNewCourse = async (e) => {
+    await axios.post(
+      "http://localhost:8000/courses",
+      {
+        ...newCourse,
+        reviews: [],
+        authorId: user.id,
+        authorImage: user.thumbnail,
+        authorName: `${user.firstName} ${user.lastName}`,
+
+        students: [],
+        rating: 5,
+        time: calculateCourseRuntime(),
+        authorName: user.username,
+      },
+      {
+        headers: { "Content-type": "application/json; charset=UTF-8" },
+      }
+    );
+    history.push("/");
+  };
+
+  const isDisabled = () => {
+    if (!newCourse) {
+      return true;
+    }
+    if (activeStep === 0) {
+      return (
+        !newCourse.name ||
+        !newCourse.category ||
+        !newCourse.level ||
+        !newCourse.description ||
+        newCourse.description === "<p><br></p>" ||
+        !newCourse.price
+      );
+    }
+    if (activeStep === 1) {
+      return !newCourse.thumbnail;
+    }
+    if (activeStep === 2) {
+      const hasASection = newCourse?.chapters?.some(
+        (chapter) => chapter?.sections?.length > 0
+      );
+      return !newCourse || !newCourse?.chapters || !hasASection;
+    }
+  };
+
   return (
     <>
+      <Prompt message="You have unsaved changes, are you sure you want to leave?" />
       <AddCourseHeader />
       <div className="pb-12">
         <div className="container">
@@ -75,11 +138,21 @@ function AddCourse() {
 
                 <div className="d-flex flex-row-reverse justify-content-between my-5">
                   {activeStep <= 1 ? (
-                    <button onClick={nextStep} className="next-btn">
+                    <button
+                      onClick={nextStep}
+                      disabled={isDisabled()}
+                      className="next-btn"
+                    >
                       Next
                     </button>
                   ) : (
-                    <button className="next-btn">Submit Course</button>
+                    <button
+                      onClick={submitNewCourse}
+                      disabled={isDisabled()}
+                      className="next-btn"
+                    >
+                      Submit Course
+                    </button>
                   )}
                   {activeStep > 0 && (
                     <button className="prev-btn" onClick={prevStep}>

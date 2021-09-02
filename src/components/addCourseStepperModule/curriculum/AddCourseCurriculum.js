@@ -27,11 +27,17 @@ export default function AddCourseCurriculum({ onNewCourseChapterChange }) {
 
   return (
     <div>
-      <div class="card mb-3  border-0">
-        <div class="card-header border-bottom px-4 py-3">
-          <h4 class="mb-0">Curriculum</h4>
+      <div className="card mb-3  border-0">
+        <div className="card-header border-bottom px-4 py-3 ">
+          <h4 className="mb-0">Curriculum</h4>
+          <button
+            onClick={() => setIsAdding(true)}
+            className="btn btn-outline-primary btn-sm mt-5"
+          >
+            Add Chapter
+          </button>
         </div>
-        <div class="card-body ">
+        <div className="card-body ">
           {chapters.map((chap) => (
             <AddCourseCurriculumChapter
               chapter={chap}
@@ -42,14 +48,7 @@ export default function AddCourseCurriculum({ onNewCourseChapterChange }) {
           {isAdding ? (
             <AddCourseCurriculumAddChapter onChapterAdd={onNewChapterAdd} />
           ) : (
-            <>
-              <button
-                onClick={() => setIsAdding(true)}
-                class="btn btn-outline-primary btn-sm mt-5"
-              >
-                Add Chapter
-              </button>
-            </>
+            <></>
           )}
         </div>
       </div>

@@ -46,3 +46,8 @@
 .border-transparent {
   border: 1px solid transparent !important;
 }
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

@@ -19,7 +19,6 @@ function CourseBanner({ course, courseSingleBookmark }) {
                     <h1 className="text-white display-4 fw-semi-bold">
                       Getting Started with {course.name}
                     </h1>
-                    <p className="text-white mb-6 lead">{course.description}</p>
                     <div className="d-flex align-items-center">
                       {storageUser && (
                         <>

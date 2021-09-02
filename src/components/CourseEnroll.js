@@ -5,7 +5,6 @@ function CourseEnroll({ course, toggleEnrollCourse }) {
   const enrollCourse = () => {
     toggleEnrollCourse(course.id);
   };
-  console.log(user);
   return (
     <>
       {course && (
@@ -14,16 +13,10 @@ function CourseEnroll({ course, toggleEnrollCourse }) {
             <div className="p-1">
               <div
                 className="d-flex justify-content-center position-relative rounded py-10 border-white border rounded-3 bg-cover"
-                style={{ backgroundImage: `url =(${course.thumbnail})` }}
-              >
-                <img className="course-img" src={course.thumbnail} />
-                <a
-                  className="popup-youtube icon-shape rounded-circle btn-play icon-xl text-decoration-none"
-                  href="https://www.youtube.com/watch?v=JRzWRZahOVU"
-                >
-                  <i className="fe fe-play"></i>
-                </a>
-              </div>
+                style={{
+                  backgroundImage: `url("/images/courses/${course.thumbnail}")`,
+                }}
+              ></div>
             </div>
             <div className="card-body">
               <div className="mb-3">

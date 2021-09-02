@@ -12,11 +12,10 @@ import "./styles/_global.scss";
 import Courses from "./pages/Courses";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
-import Blogs from "./pages/Blogs";
-import Blog from "./pages/Blog";
+
 import Course from "./pages/Course";
-import Dashboard from "./pages/Dashboard";
 import AddCourse from "./pages/AddCourse";
+import UserDashboard from "./pages/UserDashboard";
 
 function App() {
   return (
@@ -36,14 +35,7 @@ function App() {
           <Nav />
           <Courses />
         </Route>
-        <Route path="/blogs">
-          <Nav />
-          <Blogs />
-        </Route>
-        <Route path="/blog/:blogId">
-          <Nav />
-          <Blog />
-        </Route>
+
         <Route path="/course/:id">
           <Nav />
           <Course />
@@ -53,7 +45,7 @@ function App() {
         </Route>
         <Route path="/user/dashboard">
           <Nav />
-          <Dashboard />
+          <UserDashboard />
         </Route>
         <Route path="/addcourse">
           <Nav />

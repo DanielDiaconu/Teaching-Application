@@ -30,6 +30,7 @@ function AddCourseCurriculumAddChapter({ onChapterAdd }) {
         onChange={onChapterTitleChange}
       />
       <button
+        style={{ width: "60px" }}
         onClick={onChaperSave}
         class="btn btn-outline-primary btn-sm mt-5"
       >

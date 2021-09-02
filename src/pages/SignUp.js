@@ -7,6 +7,10 @@ const newUser = {
   password: "",
   bookmarks: [],
   enrolledCourses: [],
+  firstName: "",
+  lastName: "",
+  phone: "",
+  address: "",
 };
 
 function SignUp() {

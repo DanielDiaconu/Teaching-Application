@@ -6,6 +6,7 @@ import CourseContents from "../components/CourseContents";
 import CourseDescription from "../components/CourseDescription";
 import CourseEnroll from "../components/CourseEnroll";
 import CourseReviewList from "../components/CourseReviewList";
+import CourseSingleAuthor from "../components/CourseSingleAuthor";
 
 const initialObject = {
   id: 0,
@@ -232,8 +233,6 @@ function Course() {
     setReRender((prev) => !prev);
   };
 
-  console.log(reRender);
-
   useEffect(() => {
     fetchCourse();
   }, [id]);
@@ -338,74 +337,7 @@ function Course() {
                 toggleEnrollCourse={handleCourseEnrolling}
               />
 
-              <div className="card">
-                <div className="card-body">
-                  <div className="d-flex align-items-center">
-                    <div className="position-relative">
-                      <img
-                        src="../assets/images/avatar/avatar-1.jpg"
-                        alt=""
-                        className="rounded-circle avatar-xl"
-                      />
-                      <a
-                        href="#"
-                        className="position-absolute mt-2 ms-n3"
-                        data-bs-toggle="tooltip"
-                        data-placement="top"
-                        title=""
-                        data-bs-original-title="Verifed"
-                      >
-                        <img
-                          src="../assets/images/svg/checked-mark.svg"
-                          alt=""
-                          height="30"
-                          width="30"
-                        />
-                      </a>
-                    </div>
-                    <div className="ms-4">
-                      <h4 className="mb-0">Jenny Wilson</h4>
-                      <p className="mb-1 fs-6">Front-end Developer, Designer</p>
-                      <span className="fs-6">
-                        <span className="text-warning">4.5</span>
-                        <span className="mdi mdi-star text-warning me-2"></span>
-                        Instructor Rating
-                      </span>
-                    </div>
-                  </div>
-                  <div className="border-top row mt-3 border-bottom mb-3 g-0">
-                    <div className="col">
-                      <div className="pe-1 ps-2 py-3">
-                        <h5 className="mb-0">11,604</h5>
-                        <span>Students</span>
-                      </div>
-                    </div>
-                    <div className="col border-start">
-                      <div className="pe-1 ps-3 py-3">
-                        <h5 className="mb-0">32</h5>
-                        <span>Courses</span>
-                      </div>
-                    </div>
-                    <div className="col border-start">
-                      <div className="pe-1 ps-3 py-3">
-                        <h5 className="mb-0">12,230</h5>
-                        <span>Reviews</span>
-                      </div>
-                    </div>
-                  </div>
-                  <p>
-                    I am an Innovation designer focussing on UX/UI based in
-                    Berlin. As a creative resident at Figma explored the city of
-                    the future and how new technologies.
-                  </p>
-                  <a
-                    href="instructor-profile.html"
-                    className="btn btn-outline-white btn-sm"
-                  >
-                    View Details
-                  </a>
-                </div>
-              </div>
+              <CourseSingleAuthor course={course} />
             </div>
           </div>
           <div className="pt-12 pb-3">
