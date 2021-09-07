@@ -78,6 +78,7 @@ function Course() {
         date: new Date().toString(),
         authorName: `${user.firstName} ${user.lastName}`,
         authorAvatar: user.thumbnail,
+        authorId: user.id,
         id: Math.floor(Math.random() * 1000),
         likes: 0,
         hasLiked: [],
@@ -339,19 +340,6 @@ function Course() {
               />
 
               <CourseSingleAuthor course={course} />
-            </div>
-          </div>
-          <div className="pt-12 pb-3">
-            <div className="row d-md-flex align-items-center mb-4">
-              <div className="col-12">
-                <h2 className="mb-0">Related Courses</h2>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-3 col-md-6 col-12"></div>
-              <div className="col-lg-3 col-md-6 col-12"></div>
-              <div className="col-lg-3 col-md-6 col-12"></div>
-              <div className="col-lg-3 col-md-6 col-12"></div>
             </div>
           </div>
         </div>

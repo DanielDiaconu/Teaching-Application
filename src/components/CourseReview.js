@@ -70,15 +70,17 @@ export default function CourseReview({
               <div className="text-muted mt-2">User has voted.</div>
             )}
           </div>
-          <MdDeleteForever
-            style={{
-              fontSize: "24px",
-              marginLeft: "50px",
-              position: "absolute",
-              right: "20px",
-            }}
-            onClick={deleteReview}
-          />
+          {user?.id === review.authorId && (
+            <MdDeleteForever
+              style={{
+                fontSize: "24px",
+                marginLeft: "50px",
+                position: "absolute",
+                right: "20px",
+              }}
+              onClick={deleteReview}
+            />
+          )}
         </div>
       )}
     </>

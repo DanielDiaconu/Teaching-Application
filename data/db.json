@@ -6,7 +6,19 @@
       "time": 36000,
       "name": "Intro to JS : An introduction to Modern JavaScript",
       "description": "If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.",
-      "reviews": [],
+      "reviews": [
+        {
+          "body": "Added just for testing !",
+          "rating": "5",
+          "date": "Tue Sep 07 2021 15:29:26 GMT+0300 (Eastern European Summer Time)",
+          "authorName": "First User",
+          "authorAvatar": "avatar-4.jpg",
+          "authorId": 1,
+          "id": 369,
+          "likes": 0,
+          "hasLiked": []
+        }
+      ],
       "authorId": 2,
       "students": [
         1,
@@ -14,7 +26,7 @@
       ],
       "level": "Intermediate",
       "authorName": "Daniel Adrian",
-      "rating": null,
+      "rating": 5,
       "category": "JavaScript",
       "thumbnail": "course-javascript.jpg",
       "chapters": [
@@ -111,13 +123,25 @@
       "time": 72000,
       "name": "Angular : The complete guide",
       "description": "If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.",
-      "reviews": [],
+      "reviews": [
+        {
+          "body": "Nice course. I learned plenty.",
+          "rating": "4",
+          "date": "Tue Sep 07 2021 15:30:51 GMT+0300 (Eastern European Summer Time)",
+          "authorName": "Elisabeth Banks",
+          "authorAvatar": "avatar-9.jpg",
+          "authorId": 2,
+          "id": 100,
+          "likes": 0,
+          "hasLiked": []
+        }
+      ],
       "authorId": 2,
       "students": [
         1
       ],
       "level": "Intermediate",
-      "rating": null,
+      "rating": 4,
       "category": "Angular",
       "thumbnail": "course-angular.jpg",
       "chapters": [
@@ -151,7 +175,19 @@
       "time": 52000,
       "name": "GatsBy JS: build blog with graphQL and gatsby js",
       "description": "If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.",
-      "reviews": [],
+      "reviews": [
+        {
+          "body": "This is an wonderful course.",
+          "rating": "4",
+          "date": "Tue Sep 07 2021 15:31:11 GMT+0300 (Eastern European Summer Time)",
+          "authorName": "Elisabeth Banks",
+          "authorAvatar": "avatar-9.jpg",
+          "authorId": 2,
+          "id": 857,
+          "likes": 0,
+          "hasLiked": []
+        }
+      ],
       "authorId": 2,
       "students": [],
       "level": "Advanced",
@@ -189,11 +225,23 @@
       "time": 242042034,
       "name": "GraphQl : Introduction to GraphQl basics",
       "description": "If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.",
-      "reviews": [],
+      "reviews": [
+        {
+          "body": "I am pleased with i have learned from this course.",
+          "rating": "5",
+          "date": "Tue Sep 07 2021 15:31:29 GMT+0300 (Eastern European Summer Time)",
+          "authorName": "Elisabeth Banks",
+          "authorAvatar": "avatar-9.jpg",
+          "authorId": 2,
+          "id": 123,
+          "likes": 0,
+          "hasLiked": []
+        }
+      ],
       "authorId": 1,
       "students": [],
       "level": "Intermediate",
-      "rating": 4,
+      "rating": 5,
       "category": "GraphQl",
       "thumbnail": "course-graphql.jpg",
       "chapters": [
@@ -280,11 +328,23 @@
       "time": 24412410,
       "name": "React : Intro to React for beginners",
       "description": "If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.",
-      "reviews": [],
+      "reviews": [
+        {
+          "body": "Great course for beginners .",
+          "rating": "2",
+          "date": "Tue Sep 07 2021 15:31:49 GMT+0300 (Eastern European Summer Time)",
+          "authorName": "Elisabeth Banks",
+          "authorAvatar": "avatar-9.jpg",
+          "authorId": 2,
+          "id": 300,
+          "likes": 0,
+          "hasLiked": []
+        }
+      ],
       "authorId": 1,
       "students": [],
       "level": "Beginner",
-      "rating": 4,
+      "rating": 2,
       "category": "React",
       "thumbnail": "course-react.jpg",
       "chapters": [
@@ -318,11 +378,23 @@
       "time": 32131241,
       "name": "NodeJS Tutorial",
       "description": "If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.",
-      "reviews": [],
+      "reviews": [
+        {
+          "body": "I have learned a lot from this one.",
+          "rating": "4",
+          "date": "Tue Sep 07 2021 15:32:21 GMT+0300 (Eastern European Summer Time)",
+          "authorName": "Elisabeth Banks",
+          "authorAvatar": "avatar-9.jpg",
+          "authorId": 2,
+          "id": 42,
+          "likes": 0,
+          "hasLiked": []
+        }
+      ],
       "authorId": 1,
       "students": [],
       "level": "Advanced",
-      "rating": 3,
+      "rating": 4,
       "category": "Node",
       "thumbnail": "course-node.jpg",
       "chapters": [
@@ -369,10 +441,22 @@
           ]
         }
       ],
-      "reviews": [],
+      "reviews": [
+        {
+          "body": "Thank you for your time, a well put togheter course.",
+          "rating": "4",
+          "date": "Tue Sep 07 2021 15:32:43 GMT+0300 (Eastern European Summer Time)",
+          "authorName": "Elisabeth Banks",
+          "authorAvatar": "avatar-9.jpg",
+          "authorId": 2,
+          "id": 27,
+          "likes": 0,
+          "hasLiked": []
+        }
+      ],
       "authorId": 1,
       "students": [],
-      "rating": 5,
+      "rating": 4,
       "time": 231231,
       "authorName": "Daniel Adrian",
       "id": 8

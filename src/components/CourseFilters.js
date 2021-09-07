@@ -162,7 +162,6 @@ export default function CourseFilters({ onFiltersChange }) {
               type="checkbox"
               className="form-check-input"
               id="beginnerTwoCheck"
-              checked=""
             />
             <label className="form-check-label" htmlFor="beginnerTwoCheck">
               Beginner

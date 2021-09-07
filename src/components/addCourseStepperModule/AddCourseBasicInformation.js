@@ -92,7 +92,7 @@ function AddCourseBasicInformation({ onBasicInfoChange }) {
                 value={info.level}
               >
                 <option value="">Select level</option>
-                <option value="Beginner">Beginners</option>
+                <option value="Beginner">Beginner</option>
                 <option value="Intermediate">Intermediate</option>
                 <option value="Advanced">Advanced</option>
               </select>
