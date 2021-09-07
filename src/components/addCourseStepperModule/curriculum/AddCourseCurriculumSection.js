@@ -38,7 +38,7 @@ export default function AddCourseCurriculumSection({
     <>
       <div className="list-group list-group-flush  border-top-0">
         <div>
-          <div className="list-group-item border-transparent rounded px-1 py-2 mb-1">
+          <div className="list-group-item border-transparent rounded px-1 py-0 mb-1">
             <div className="d-flex align-items-center justify-content-between">
               {!isEditing ? (
                 <div className="d-flex align-items-center">
