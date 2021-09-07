@@ -1,6 +1,7 @@
 # Edu Courses - Online Teaching Application developed in React.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Online teaching application in wich the user can view online courses , rate the course , add a course review and also create a new course if the user is logged in and edit the profile in depth when logged .Also has the ability to bookmark or enroll courses.
+
 
 ## Available Scripts
 
@@ -8,7 +9,7 @@ In the project directory, you can run:
 
 ### `1. npm install`
 
-Install all required dependencies
+Install all required dependencies.
 
 
 
