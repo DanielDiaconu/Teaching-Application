@@ -91,21 +91,7 @@ function SignIn() {
                     value={loginInfo.password}
                   />
                 </div>
-                <div className="d-lg-flex justify-content-between align-items-center mb-4">
-                  <div className="form-check">
-                    <input
-                      type="checkbox"
-                      className="form-check-input"
-                      id="rememberme"
-                    />
-                    <label className="form-check-label " htmlFor="rememberme">
-                      Remember me
-                    </label>
-                  </div>
-                  <div>
-                    <a href="forget-password.html">Forgot your password?</a>
-                  </div>
-                </div>
+
                 <div>
                   <div className="d-grid">
                     <button type="submit" className="btn btn-primary ">
