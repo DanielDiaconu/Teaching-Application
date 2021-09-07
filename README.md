@@ -1,6 +1,6 @@
 # Edu Courses - Online Teaching Application developed in React.
 
-Online teaching application in wich the user can view online courses , rate the course , add a course review and also create a new course if the user is logged in and edit the profile in depth when logged .Also has the ability to bookmark or enroll courses.
+Online teaching application in which the user can view online courses, rate the course and leave a review.Users can also become instructors, meaning that any user can add his own course to the application. Users can also manage their own profile, editing their credentials. They can also bookmark courses or enroll into the ones they desire.
 
 
 ## Available Scripts
@@ -22,5 +22,7 @@ Execute this command line in a new terminal window.
 
 Runs the app.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## Print-Screens
 
 
