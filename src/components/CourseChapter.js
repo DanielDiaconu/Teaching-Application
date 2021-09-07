@@ -20,9 +20,9 @@ function CourseChapter({ chapter }) {
           <div className="me-auto">{chapter?.title}</div>
 
           {!isCollapsed ? (
-            <i className="fe fe-chevron-down fs-4"></i>
+            <i className="fe fe-chevron-down fs-3"></i>
           ) : (
-            <i className="fe fe-chevron-up fs-4"></i>
+            <i className="fe fe-chevron-up fs-3"></i>
           )}
         </a>
         <div

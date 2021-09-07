@@ -55,7 +55,7 @@ function AddCourseBasicInformation({ onBasicInfoChange }) {
                 <option value="GraphQL">GraphQl</option>
                 <option value="Node">Node Js</option>
                 <option value="Angular">Angular</option>
-                <option value="Phyton">Phyton</option>
+                <option value="Python">Python</option>
                 <option value="GatsBy">GatsBy</option>
                 <option value="CSS3">CSS3</option>
               </select>

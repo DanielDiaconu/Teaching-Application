@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, Redirect } from "react-router-dom";
 
 const newUser = {
   username: "",
@@ -18,6 +18,7 @@ const newUser = {
 function SignUp() {
   const [user, setUser] = useState(newUser);
   const history = useHistory();
+  const storageUser = JSON.parse(sessionStorage.getItem("user"));
 
   const onInputChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -33,8 +34,12 @@ function SignUp() {
     });
     let data = await res.json();
     sessionStorage.setItem("user", JSON.stringify(data));
-    history.push("/signin");
+    history.push("/");
   };
+
+  if (storageUser) {
+    return <Redirect to="/" />;
+  }
 
   return (
     <div className="container d-flex flex-column">
@@ -60,16 +65,30 @@ function SignUp() {
               </div>
               <form onSubmit={submitUser}>
                 <div className="mb-3">
-                  <label htmlFor="username" className="form-label">
-                    User Name
+                  <label htmlFor="firstName" className="form-label">
+                    First Name
                   </label>
                   <input
                     type="text"
-                    id="username"
+                    id="firstName"
                     className="form-control"
-                    name="username"
-                    placeholder="User Name"
-                    value={user.username}
+                    name="firstName"
+                    placeholder="First Name"
+                    value={user.firstName}
+                    onChange={onInputChange}
+                  />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="lastName" className="form-label">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    className="form-control"
+                    name="lastName"
+                    placeholder="Last Name"
+                    value={user.lastName}
                     onChange={onInputChange}
                   />
                 </div>

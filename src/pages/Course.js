@@ -7,6 +7,7 @@ import CourseDescription from "../components/CourseDescription";
 import CourseEnroll from "../components/CourseEnroll";
 import CourseReviewList from "../components/CourseReviewList";
 import CourseSingleAuthor from "../components/CourseSingleAuthor";
+import { ToastContainer, toast } from "react-toastify";
 
 const initialObject = {
   id: 0,
@@ -187,6 +188,11 @@ function Course() {
       })
     );
     setReRender((prev) => !prev);
+    if (user.bookmarks.includes(id)) {
+      toast.error("Removed from bookmarks!");
+    } else {
+      toast.success("Added to bookmarks!");
+    }
   };
 
   const handleCourseEnrolling = async (id) => {
@@ -233,6 +239,12 @@ function Course() {
       })
     );
     setReRender((prev) => !prev);
+
+    if (user.enrolledCourses.includes(id)) {
+      toast.error(`You have unsubscribed from ${course.name}`);
+    } else {
+      toast.success(`You have enrolled to ${course.name}`);
+    }
   };
 
   useEffect(() => {
@@ -245,6 +257,17 @@ function Course() {
         course={course}
         courseSingleBookmark={handleCourseSingleBookmark}
       />
+      <ToastContainer
+        position="bottom-center"
+        autoClose={3500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+      />
+
       <div className="pb-10">
         <div className="container">
           <div className="row">

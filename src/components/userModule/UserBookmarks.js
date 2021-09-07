@@ -1,10 +1,13 @@
 import axios from "axios";
+import { get } from "lodash";
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 import CourseCard from "../CourseCard";
 
 function UserBookmarks() {
   const storageUser = JSON.parse(sessionStorage.getItem("user"));
   const [data, setData] = useState([]);
+  const location = useLocation();
 
   const buildQueryParams = (bookmarks) => {
     let url = "?";
@@ -17,13 +20,31 @@ function UserBookmarks() {
   const fetchBookmarkedCourses = async () => {
     let response =
       storageUser && storageUser.bookmarks.length
-        ? await axios.get(
-            `http://localhost:8000/courses${buildQueryParams(
-              storageUser.bookmarks
-            )}`
-          )
+        ? await getBookmarkedCoursesWithAuthor()
         : [];
-    setData(response.data);
+    setData(response);
+  };
+
+  const getBookmarkedCoursesWithAuthor = async () => {
+    let usersResponse = await axios.get("http://localhost:8000/users");
+
+    let res = await axios.get(
+      `http://localhost:8000/courses${buildQueryParams(storageUser.bookmarks)}`
+    );
+    const coursesWithAuthor = res.data.map((course) => {
+      const author = usersResponse.data.find(
+        (user) => user.id === course.authorId
+      );
+      if (author) {
+        return {
+          ...course,
+          authorImage: author.thumbnail,
+          authorName: `${author.firstName} ${author.lastName}`,
+        };
+      }
+      return course;
+    });
+    return coursesWithAuthor;
   };
 
   const removeBookmark = async (id) => {

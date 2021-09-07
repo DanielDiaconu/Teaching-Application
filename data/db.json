@@ -21,8 +21,8 @@
       ],
       "authorId": 2,
       "students": [
-        1,
-        2
+        2,
+        1
       ],
       "level": "Intermediate",
       "authorName": "Daniel Adrian",
@@ -473,7 +473,7 @@
         6
       ],
       "firstName": "First",
-      "lastName": "User",
+      "lastName": "Test",
       "phone": "555-244-2445",
       "address": "Principal Street",
       "enrolledCourses": [
@@ -483,7 +483,7 @@
       ],
       "id": 1,
       "description": "Hi , i am a new user , this here just a placeholder for testing purposes . Everything seems to be working as intended !",
-      "thumbnail": "avatar-4.jpg"
+      "thumbnail": "avatar-6.jpg"
     },
     {
       "username": "User15",

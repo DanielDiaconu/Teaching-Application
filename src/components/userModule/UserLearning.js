@@ -17,13 +17,33 @@ function UserLearning() {
   const fetchEnrolledCourses = async () => {
     let response =
       storageUser && storageUser.enrolledCourses.length
-        ? await axios.get(
-            `http://localhost:8000/courses${buildQueryEnrolledParams(
-              storageUser.enrolledCourses
-            )}`
-          )
+        ? await getEnrolledCoursesWithAuthor()
         : [];
-    setData(response.data);
+    setData(response);
+  };
+
+  const getEnrolledCoursesWithAuthor = async () => {
+    let usersResponse = await axios.get("http://localhost:8000/users");
+
+    let res = await axios.get(
+      `http://localhost:8000/courses${buildQueryEnrolledParams(
+        storageUser.enrolledCourses
+      )}`
+    );
+    const coursesWithAuthor = res.data.map((course) => {
+      const author = usersResponse.data.find(
+        (user) => user.id === course.authorId
+      );
+      if (author) {
+        return {
+          ...course,
+          authorImage: author.thumbnail,
+          authorName: `${author.firstName} ${author.lastName}`,
+        };
+      }
+      return course;
+    });
+    return coursesWithAuthor;
   };
 
   useEffect(() => {

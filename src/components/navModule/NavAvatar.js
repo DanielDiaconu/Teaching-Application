@@ -41,22 +41,9 @@ function NavAvatar({ user }) {
             <div className="dropdown-divider"></div>
             <ul className="list-unstyled">
               <li>
-                <a className="dropdown-item" href="./pages/profile-edit.html">
+                <Link className="dropdown-item" to="/user">
                   <i className="fe fe-user me-2"></i>Profile
-                </a>
-              </li>
-              <li>
-                <a
-                  className="dropdown-item"
-                  href="./pages/student-subscriptions.html"
-                >
-                  <i className="fe fe-star me-2"></i>Subscription
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  <i className="fe fe-settings me-2"></i>Settings
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="dropdown-divider"></div>

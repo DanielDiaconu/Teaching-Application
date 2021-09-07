@@ -12,6 +12,7 @@ import "./styles/_global.scss";
 import Courses from "./pages/Courses";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
+import "react-toastify/dist/ReactToastify.css";
 
 import Course from "./pages/Course";
 import AddCourse from "./pages/AddCourse";

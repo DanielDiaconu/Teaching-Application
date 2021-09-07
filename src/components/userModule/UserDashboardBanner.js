@@ -22,50 +22,7 @@ function UserDashboardBanner({ user }) {
               />
             </div>
             <div className="lh-1">
-              <h2 className="mb-0">
-                {`${user?.firstName} ${user?.lastName}`}
-                <a
-                  href="#"
-                  className="text-decoration-none"
-                  data-bs-toggle="tooltip"
-                  data-placement="top"
-                  title=""
-                  data-bs-original-title="Beginner"
-                >
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      x="3"
-                      y="8"
-                      width="2"
-                      height="6"
-                      rx="1"
-                      fill="#754FFE"
-                    ></rect>
-                    <rect
-                      x="7"
-                      y="5"
-                      width="2"
-                      height="9"
-                      rx="1"
-                      fill="#DBD8E9"
-                    ></rect>
-                    <rect
-                      x="11"
-                      y="2"
-                      width="2"
-                      height="12"
-                      rx="1"
-                      fill="#DBD8E9"
-                    ></rect>
-                  </svg>
-                </a>
-              </h2>
+              <h2 className="mb-0">{`${user?.firstName} ${user?.lastName}`}</h2>
               <p className="mb-0 d-block">{user?.email}</p>
             </div>
           </div>

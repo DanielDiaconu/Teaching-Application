@@ -47,12 +47,13 @@ function Nav() {
                 Courses
               </Link>
             </li>
-
-            <li className="navbar-item mr-15">
-              <Link className="nav-links-style" to="/user">
-                User
-              </Link>
-            </li>
+            {user && (
+              <li className="navbar-item mr-15">
+                <Link className="nav-links-style" to="/user">
+                  User
+                </Link>
+              </li>
+            )}
             {user && (
               <li className="navbar-item mr-15">
                 <Link className="nav-links-style" to="/addcourse">

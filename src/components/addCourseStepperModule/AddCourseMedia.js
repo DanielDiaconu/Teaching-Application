@@ -13,7 +13,7 @@ function AddCourseMedia({ onThumbnailChange }) {
   return (
     <div>
       <h1>Select Course Thumbnail</h1>
-      <div class="d-flex flex-wrap">
+      <div className="d-flex flex-wrap">
         {images.map((img, i) => (
           <div
             key={i}

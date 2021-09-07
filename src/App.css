@@ -51,3 +51,7 @@
   opacity: 0.5;
   pointer-events: none;
 }
+
+.mr-3 {
+  margin-right: 3px;
+}

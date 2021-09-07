@@ -59,7 +59,9 @@ function CourseAddReview({ submitReview }) {
 
         <div className="d-flex justify-content-between mt-3">
           <small className="font-weight-light">
-            <span id="charactersRemaining">{1000 - newReview.body.length}</span>
+            <span id="charactersRemaining" className="mr-3">
+              {1000 - newReview.body.length}
+            </span>
             characters remaining
           </small>
           <button

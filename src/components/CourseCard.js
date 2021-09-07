@@ -10,6 +10,7 @@ import {
 function CourseCard({ course, toggleBookmark, onBookmarkRemove }) {
   const user = JSON.parse(sessionStorage.getItem("user"));
   const location = useLocation();
+  console.log(location);
 
   const calculateCourseTime = () => {
     return moment().startOf("day").seconds(course?.time).format("H:mm");
@@ -112,19 +113,21 @@ function CourseCard({ course, toggleBookmark, onBookmarkRemove }) {
                   <BsFillTrash2Fill />
                 </div>
               )}
-              {user && (
-                <>
-                  {user.bookmarks.includes(course.id) ? (
-                    <div className="col-auto" onClick={addToBookmark}>
-                      <BsFillBookmarkFill />
-                    </div>
-                  ) : (
-                    <div className="col-auto" onClick={addToBookmark}>
-                      <BsBookmark />
-                    </div>
-                  )}
-                </>
-              )}
+              {user &&
+                location.pathname !== "/user/dashboard/bookmarks" &&
+                location.pathname !== "/user/dashboard/enrolled" && (
+                  <>
+                    {user.bookmarks.includes(course.id) ? (
+                      <div className="col-auto" onClick={addToBookmark}>
+                        <BsFillBookmarkFill />
+                      </div>
+                    ) : (
+                      <div className="col-auto" onClick={addToBookmark}>
+                        <BsBookmark />
+                      </div>
+                    )}
+                  </>
+                )}
             </div>
           </div>
         </div>

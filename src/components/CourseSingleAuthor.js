@@ -5,14 +5,14 @@ function CourseSingleAuthor({ course }) {
   const [user, setUser] = useState({});
 
   const fetchUser = async () => {
-    let res = await axios.get(
-      `http://localhost:8000/users/${course?.authorId}`
-    );
+    let res = await axios.get(`http://localhost:8000/users/${course.authorId}`);
     setUser(res.data);
   };
 
   useEffect(() => {
-    fetchUser();
+    if (course.id) {
+      fetchUser();
+    }
   }, [course]);
 
   return (

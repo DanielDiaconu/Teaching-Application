@@ -49,9 +49,9 @@ export default function AddCourseCurriculumChapter({
           <div className="me-auto">{chapter.title}</div>
 
           {!isCollapsed ? (
-            <i className="fe fe-chevron-down fs-4"></i>
+            <i className="fe fe-chevron-down fs-3"></i>
           ) : (
-            <i className="fe fe-chevron-up fs-4"></i>
+            <i className="fe fe-chevron-up fs-3"></i>
           )}
         </a>
         <div
@@ -60,9 +60,8 @@ export default function AddCourseCurriculumChapter({
           data-bs-parent="#courseAccordion"
         >
           {chapter.sections.map((section, i) => (
-            <div className="pt-3 pb-2">
+            <div className="pt-3 pb-2" key={chapter.id}>
               <AddCourseCurriculumSection
-                key={chapter.id}
                 section={section}
                 handleDeleteAddedSection={removeAddedSection}
                 handleEditSection={editSection}

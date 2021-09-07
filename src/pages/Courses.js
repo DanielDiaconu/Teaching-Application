@@ -76,7 +76,7 @@ function Courses() {
           <div className="row align-items-center">
             <div className="col-xl-12 col-lg-12 col-md-12 col-12">
               <div>
-                <h1 className="mb-0 text-white display-4">Filter Page</h1>
+                <h1 className="mb-0 text-white display-4">Courses</h1>
               </div>
             </div>
           </div>

@@ -17,7 +17,7 @@ function CourseBanner({ course, courseSingleBookmark }) {
                 <div className="col-xl-7 col-lg-7 col-md-12">
                   <div>
                     <h1 className="text-white display-4 fw-semi-bold">
-                      Getting Started with {course.name}
+                      {course.name}
                     </h1>
                     <div className="d-flex align-items-center">
                       {storageUser && (
@@ -29,7 +29,9 @@ function CourseBanner({ course, courseSingleBookmark }) {
                               className="bookmark text-white text-decoration-none"
                             >
                               <BsFillBookmarkFill />
-                              Bookmark
+                              <span style={{ marginLeft: "5px" }}>
+                                Bookmark
+                              </span>
                             </div>
                           ) : (
                             <div
@@ -38,7 +40,9 @@ function CourseBanner({ course, courseSingleBookmark }) {
                               className="bookmark text-white text-decoration-none"
                             >
                               <BsBookmark />
-                              Bookmark
+                              <span style={{ marginLeft: "5px" }}>
+                                Bookmark
+                              </span>
                             </div>
                           )}
                         </>

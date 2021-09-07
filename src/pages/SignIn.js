@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, Redirect } from "react-router-dom";
 
 const initialObject = {
   email: "",
@@ -10,6 +10,7 @@ function SignIn() {
   const [loginInfo, setLoginInfo] = useState(initialObject);
   const [users, setUsers] = useState([]);
   const history = useHistory();
+  const storageUser = JSON.parse(sessionStorage.getItem("user"));
 
   const onInputChange = (e) => {
     setLoginInfo({ ...loginInfo, [e.target.name]: e.target.value });
@@ -39,6 +40,10 @@ function SignIn() {
   useEffect(() => {
     fetchUsers();
   }, []);
+
+  if (storageUser) {
+    return <Redirect to="/" />;
+  }
 
   return (
     <div className="container d-flex flex-column">
