@@ -420,46 +420,6 @@
           ]
         }
       ]
-    },
-    {
-      "description": "<p>test test</p>",
-      "name": "React",
-      "level": "Intermediate",
-      "category": "React",
-      "price": "298",
-      "thumbnail": "course-react.jpg",
-      "chapters": [
-        {
-          "id": "c46f4491-ce8b-40b6-a77b-04ce6d1b807f",
-          "title": "New chap",
-          "sections": [
-            {
-              "id": "6f4b38cd-5c46-4148-9727-1b1e15e2edd6",
-              "title": "Section 1",
-              "length": "231231"
-            }
-          ]
-        }
-      ],
-      "reviews": [
-        {
-          "body": "Thank you for your time, a well put togheter course.",
-          "rating": "4",
-          "date": "Tue Sep 07 2021 15:32:43 GMT+0300 (Eastern European Summer Time)",
-          "authorName": "Elisabeth Banks",
-          "authorAvatar": "avatar-9.jpg",
-          "authorId": 2,
-          "id": 27,
-          "likes": 0,
-          "hasLiked": []
-        }
-      ],
-      "authorId": 1,
-      "students": [],
-      "rating": 4,
-      "time": 231231,
-      "authorName": "Daniel Adrian",
-      "id": 8
     }
   ],
   "users": [
@@ -473,7 +433,7 @@
         6
       ],
       "firstName": "First",
-      "lastName": "Test",
+      "lastName": "User",
       "phone": "555-244-2445",
       "address": "Principal Street",
       "enrolledCourses": [
@@ -483,7 +443,7 @@
       ],
       "id": 1,
       "description": "Hi , i am a new user , this here just a placeholder for testing purposes . Everything seems to be working as intended !",
-      "thumbnail": "avatar-6.jpg"
+      "thumbnail": "avatar-4.jpg"
     },
     {
       "username": "User15",

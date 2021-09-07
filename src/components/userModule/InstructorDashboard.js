@@ -12,6 +12,7 @@ import {
   Button,
   DialogContentText,
 } from "@material-ui/core";
+import { ToastContainer, toast } from "react-toastify";
 
 function InstructorDashboard() {
   const [courses, setCourses] = useState([]);
@@ -61,6 +62,7 @@ function InstructorDashboard() {
     const filteredCourses = courses.filter((course) => course.id !== deletedId);
     setCourses(filteredCourses);
     setOpen(false);
+    toast.error("Course has been deleted!");
   };
 
   useEffect(() => {
@@ -69,6 +71,16 @@ function InstructorDashboard() {
 
   return (
     <>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={3500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+      ></ToastContainer>
       <div className="row">
         <InstructorDashboardAbout user={user} />
         <InstructorDashboardInfo courses={courses} />
