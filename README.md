@@ -25,4 +25,30 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Print-Screens
 
+ 
+![signIn](./public/printscreens/sign_in.png)
+
+![signUp](./public/printscreens/sign_up.png)
+
+![homepage](./public/printscreens/home1.png)
+
+![courses](./public/printscreens/courses1.png)
+
+![coursesingle](./public/printscreens/course_single.png)
+
+![user](./public/printscreens/user_editprofile.png)
+
+![user](./public/printscreens/user_instructor.png)
+
+![user](./public/printscreens/user_bookmarks.png)
+
+![addcourse](./public/printscreens/addcourse_basicInformation.png)
+
+![signIn](./public/printscreens/addcourse_thumbnail.png)
+
+![signIn](./public/printscreens/addcourse_curriculum.png)
+
+
+
+
 
