@@ -32,6 +32,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ![coursesingle](./public/printscreens/course_single.png)
 
+![coursesingle](./public/printscreens/course_single2.png)
+
 ![user](./public/printscreens/user_editprofile.png)
 
 ![user](./public/printscreens/user_instructor.png)
