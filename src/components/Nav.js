@@ -1,8 +1,8 @@
 import React from "react";
 import Logo from "../images/brand/logo.svg";
-import Avatar from "../images/avatar/avatar-img.jpg";
 import { Link } from "react-router-dom";
 import NavAvatar from "./navModule/NavAvatar";
+import NavSearchBar from "./navModule/NavSearchBar";
 
 function Nav() {
   const user = JSON.parse(sessionStorage.getItem("user"));
@@ -10,8 +10,22 @@ function Nav() {
   return (
     <nav className="navbar navbar-expand-lg navbar-default">
       <div className="container-fluid px-0">
-        <Link to="/" className="navbar-brand">
-          <img src={Logo} alt="" />
+        <Link
+          to="/"
+          style={{
+            textDecoration: "none",
+            color: "black",
+            display: "flex",
+            marginRight: "30px",
+          }}
+          className="mr-5"
+        >
+          <img
+            src={"/images/notebook.png"}
+            style={{ width: "40px", height: "40px", marginRight: "5px" }}
+            alt=""
+          />
+          Edu <br /> Course
         </Link>
         <button
           className="navbar-toggler collapsed"
@@ -34,11 +48,6 @@ function Nav() {
               </Link>
             </li>
 
-            <li className="navbar-item mr-15">
-              <Link className="nav-links-style" to="/">
-                Home
-              </Link>
-            </li>
             <li className="navbar-item mr-15">
               <Link className="nav-links-style" to="/user">
                 User
@@ -88,16 +97,7 @@ function Nav() {
             </div>
           </div>
 
-          <form className="mt-3 mt-lg-0 ms-lg-3 d-flex align-items-center">
-            <span className="position-absolute ps-3 search-icon">
-              <i className="fe fe-search"></i>
-            </span>
-            <input
-              type="search"
-              className="form-control ps-6"
-              placeholder="Search Courses"
-            />
-          </form>
+          <NavSearchBar />
           {user ? (
             <NavAvatar user={user} />
           ) : (

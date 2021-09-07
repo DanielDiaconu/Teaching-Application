@@ -2,16 +2,6 @@ import React, { useEffect, useState } from "react";
 import Background from "../../images/background/profile-bg.jpg";
 
 function UserDashboardBanner({ user }) {
-  const [data, setData] = useState({});
-
-  const reRender = () => {
-    setData(user);
-  };
-
-  useEffect(() => {
-    reRender();
-  });
-
   return (
     <div className="row align-items-center">
       <div className="col-xl-12 col-lg-12 col-md-12 col-12">
@@ -26,14 +16,14 @@ function UserDashboardBanner({ user }) {
           <div className="d-flex align-items-center">
             <div className="me-2 position-relative d-flex justify-content-end align-items-end mt-n5">
               <img
-                src={`/images/courses/avatars/${data?.thumbnail}`}
+                src={`/images/courses/avatars/${user?.thumbnail}`}
                 className="avatar-xl rounded-circle border border-4 border-white"
                 alt=""
               />
             </div>
             <div className="lh-1">
               <h2 className="mb-0">
-                {`${data?.firstName} ${data?.lastName}`}
+                {`${user?.firstName} ${user?.lastName}`}
                 <a
                   href="#"
                   className="text-decoration-none"
@@ -76,7 +66,7 @@ function UserDashboardBanner({ user }) {
                   </svg>
                 </a>
               </h2>
-              <p className="mb-0 d-block">{data?.email}</p>
+              <p className="mb-0 d-block">{user?.email}</p>
             </div>
           </div>
         </div>

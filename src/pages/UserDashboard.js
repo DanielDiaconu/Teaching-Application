@@ -32,7 +32,7 @@ export default function UserDashboard() {
                 <Redirect to={`${path}/edit-profile`} />
               </Route>
               <Route path={`${path}/edit-profile`}>
-                <UserEditProfile onAvatarChange={() => console.log("test")} />
+                <UserEditProfile onAvatarChange={onUserInfoUpdate} />
               </Route>
               <Route path={`${path}/bookmarks`}>
                 <UserBookmarks />
@@ -41,7 +41,7 @@ export default function UserDashboard() {
                 <UserLearning />
               </Route>
               <Route path={`${path}/instructor`}>
-                <InstructorDashboard onAvatarChange={onUserInfoUpdate} />
+                <InstructorDashboard />
               </Route>
             </Switch>
           </div>

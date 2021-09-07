@@ -138,76 +138,7 @@ export default function CourseFilters({ onFiltersChange }) {
             </label>
           </div>
         </div>
-        <div className="card-body border-top">
-          <span className="dropdown-header px-0 mb-2"> Ratings</span>
-          <div className="custom-control custom-radio mb-1">
-            <input
-              type="radio"
-              className="form-check-input"
-              id="starRadio1"
-              name="customRadio"
-            />
-            <label className="form-check-label" htmlFor="starRadio1">
-              <i className="mdi mdi-star me-n1 text-warning"></i>
-              <i className="mdi mdi-star me-n1 text-warning"></i>
-              <i className="mdi mdi-star me-n1 text-warning"></i>
-              <i className="mdi mdi-star me-n1 text-warning"></i>
-              <i className="mdi mdi-star text-warning "></i>
-              <span className="fs-6">4.5 &amp; UP</span>
-            </label>
-          </div>
-          <div className="custom-control custom-radio mb-1">
-            <input
-              type="radio"
-              className="form-check-input"
-              id="starRadio2"
-              name="customRadio"
-            />
-            <label className="form-check-label" htmlFor="starRadio2">
-              {" "}
-              <i className="mdi mdi-star me-n1 text-warning"></i>
-              <i className="mdi mdi-star me-n1 text-warning"></i>
-              <i className="mdi mdi-star me-n1 text-warning"></i>
-              <i className="mdi mdi-star me-n1 text-warning"></i>
-              <i className="mdi mdi-star text-warning "></i>
-              <span className="fs-6">4.0 &amp; UP</span>
-            </label>
-          </div>
-          <div className="custom-control custom-radio mb-1">
-            <input
-              type="radio"
-              className="form-check-input"
-              id="starRadio3"
-              name="customRadio"
-            />
-            <label className="form-check-label" htmlFor="starRadio3">
-              {" "}
-              <i className="mdi mdi-star me-n1 text-warning"></i>
-              <i className="mdi mdi-star me-n1 text-warning"></i>
-              <i className="mdi mdi-star me-n1 text-warning"></i>
-              <i className="mdi mdi-star me-n1 text-warning"></i>
-              <i className="mdi mdi-star text-warning "></i>
-              <span className="fs-6">3.5 &amp; UP</span>
-            </label>
-          </div>
-          <div className="custom-control custom-radio mb-1">
-            <input
-              type="radio"
-              className="form-check-input"
-              id="starRadio4"
-              name="customRadio"
-            />
-            <label className="form-check-label" htmlFor="starRadio4">
-              {" "}
-              <i className="mdi mdi-star me-n1 text-warning"></i>
-              <i className="mdi mdi-star me-n1 text-warning"></i>
-              <i className="mdi mdi-star me-n1 text-warning"></i>
-              <i className="mdi mdi-star me-n1 text-warning"></i>
-              <i className="mdi mdi-star text-warning "></i>
-              <span className="fs-6">3.0 &amp; UP</span>
-            </label>
-          </div>
-        </div>
+
         <div className="card-body border-top">
           <span className="dropdown-header px-0 mb-2"> Skill Level</span>
           <div className="form-check mb-1">

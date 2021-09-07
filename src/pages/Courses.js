@@ -20,10 +20,26 @@ function Courses() {
   };
 
   const handleFiltersChange = async (filters) => {
+    let usersResponse = await axios.get("http://localhost:8000/users");
+
     let res = await axios.get(
       `http://localhost:8000/courses${buildQueryParams(filters)}`
     );
-    setCourses(res.data);
+    const coursesWithAuthor = res.data.map((course) => {
+      const author = usersResponse.data.find(
+        (user) => user.id === course.authorId
+      );
+      if (author) {
+        return {
+          ...course,
+          authorImage: author.thumbnail,
+          authorName: `${author.firstName} ${author.lastName}`,
+        };
+      }
+      return course;
+    });
+
+    setCourses(coursesWithAuthor);
   };
 
   const handleBookmarking = async (id) => {
@@ -82,9 +98,8 @@ function Courses() {
             <div className="col-xl-9 col-lg-9 col-md-8 col-12">
               <div className="row">
                 {courses.map((course, i) => (
-                  <div className="col-lg-4 col-md-6 col-12">
+                  <div key={i} className="col-lg-4 col-md-6 col-12">
                     <CourseCard
-                      key={i}
                       course={course}
                       toggleBookmark={handleBookmarking}
                     />

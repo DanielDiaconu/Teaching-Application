@@ -27,8 +27,10 @@
         }
       ],
       "authorId": 2,
-      "authorImage": "avatar-4.jpg",
-      "students": [],
+      "students": [
+        1,
+        2
+      ],
       "level": "Intermediate",
       "authorName": "Daniel Adrian",
       "rating": 4,
@@ -126,7 +128,6 @@
       "authorName": "Daniel Adrian",
       "price": 600,
       "time": 72000,
-      "authorImage": "avatar-4.jpg",
       "name": "Angular : The complete guide",
       "description": "If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.",
       "reviews": [
@@ -142,8 +143,7 @@
       ],
       "authorId": 2,
       "students": [
-        1,
-        2
+        1
       ],
       "level": "Intermediate",
       "rating": 1,
@@ -182,7 +182,6 @@
       "description": "If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.",
       "reviews": [],
       "authorId": 2,
-      "authorImage": "avatar-4.jpg",
       "students": [],
       "level": "Advanced",
       "rating": 4,
@@ -220,8 +219,7 @@
       "name": "GraphQl : Introduction to GraphQl basics",
       "description": "If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.",
       "reviews": [],
-      "authorId": 2,
-      "authorImage": "avatar-4.jpg",
+      "authorId": 1,
       "students": [],
       "level": "Intermediate",
       "rating": 4,
@@ -259,8 +257,7 @@
       "name": "CSS3: Ultimate CSS3 course for begginers",
       "description": "If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.",
       "reviews": [],
-      "authorId": 2,
-      "authorImage": "avatar-4.jpg",
+      "authorId": 1,
       "students": [
         1
       ],
@@ -300,8 +297,7 @@
       "name": "React : Intro to React for beginners",
       "description": "If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.",
       "reviews": [],
-      "authorId": 2,
-      "authorImage": "avatar-4.jpg",
+      "authorId": 1,
       "students": [],
       "level": "Beginner",
       "rating": 4,
@@ -339,8 +335,7 @@
       "name": "NodeJS Tutorial",
       "description": "If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.",
       "reviews": [],
-      "authorId": 2,
-      "authorImage": "avatar-4.jpg",
+      "authorId": 1,
       "students": [],
       "level": "Advanced",
       "rating": 3,
@@ -369,6 +364,34 @@
           ]
         }
       ]
+    },
+    {
+      "description": "<p>test test</p>",
+      "name": "React",
+      "level": "Intermediate",
+      "category": "React",
+      "price": "298",
+      "thumbnail": "course-react.jpg",
+      "chapters": [
+        {
+          "id": "c46f4491-ce8b-40b6-a77b-04ce6d1b807f",
+          "title": "New chap",
+          "sections": [
+            {
+              "id": "6f4b38cd-5c46-4148-9727-1b1e15e2edd6",
+              "title": "Section 1",
+              "length": "231231"
+            }
+          ]
+        }
+      ],
+      "reviews": [],
+      "authorId": 1,
+      "students": [],
+      "rating": 5,
+      "time": 231231,
+      "authorName": "Daniel Adrian",
+      "id": 8
     }
   ],
   "users": [
@@ -376,6 +399,7 @@
       "username": "Daniel Adrian",
       "email": "testemail@test.com",
       "password": "test",
+      "isInstructor": true,
       "bookmarks": [
         8,
         5,
@@ -387,266 +411,48 @@
       "address": "Principal Street",
       "enrolledCourses": [
         5,
-        2
+        2,
+        1
       ],
       "id": 1,
       "description": "Hi , i am a new user , this here just a placeholder for testing purposes . Everything seems to be working as intended !",
-      "thumbnail": "avatar-7.jpg"
+      "thumbnail": "avatar-4.jpg"
     },
     {
       "username": "User15",
       "email": "test@user15.com",
       "password": "test",
+      "isInstructor": true,
       "bookmarks": [
         6
       ],
       "enrolledCourses": [
         3,
-        4
+        4,
+        2,
+        1
       ],
-      "firstName": "Test",
-      "lastName": "New User",
-      "phone": "0768339706",
-      "address": "New Address",
+      "firstName": "Elisabeth",
+      "lastName": "Banks",
+      "phone": "0235346144",
+      "address": "This is my address !!",
       "id": 2,
-      "thumbnail": "avatar-6.jpg",
-      "description": "I am a new instroctuor , welcome to my new course !"
-    }
-  ],
-  "blogs": [
-    {
-      "id": 1,
-      "title": "Getting started with React in 2020",
-      "description": "Lorem ipsum dolor sit amet, accu msan in, tempor dictum nequrem ipsum...",
-      "time": 400,
-      "related": false,
-      "author": {
-        "authorId": 1,
-        "thumbnail": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg",
-        "role": "Manager",
-        "name": "Andrew Jones"
-      },
-      "thumbnail": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/blogpost-5.jpg",
-      "topSection": {
-        "articleTitle": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elem entum velitnon tortor convallis variusa placerat nequhse. Quis eu Lorem irure magna. Ex labore reprehenderit veniam irure id nostrud velit. Minim aliquip cillum laborum qui Lorem eu.",
-        "paragraph": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elementum velitnon tortor convallis variusa placerat nequhse. Mauris varius ullamcorper tincidsellus egestas innisivel sollicituullam feugiate facilisis ones Suspendisse blandit sedtincinean.",
-        "quote": "Failure will never overtake me if my determination to succeed is strong enough.",
-        "quoteAuthor": "Andrew Jones"
-      },
-      "middleSection": {
-        "paragraph": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elem entum velitnon tortor convallis variusa placerat nequhse. Quis eu Lorem irure magna. Ex labore reprehenderit veniam irure id nostrud velit. Minim aliquip cillum laborum qui Lorem eu.",
-        "unorderedListTitle": "Unordered Lists (Nested)",
-        "unorderedList": "Lorem ipsum dolor sit amet",
-        "orderedListTitle": "Ordered List (Nested)",
-        "orderedList": "Lorem ipsum dolor sit amet"
-      },
-      "bottomSection": {
-        "title": "Image Alignment",
-        "firstParagraph": "Welcome to image alignment! The best way to demonstrate the ebb and flow of the various image positioning options is to nestle them snuggly among an ocean of words. Grab a paddle and let’s get started.",
-        "firstImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/center-img.jpg",
-        "secondParagraph": "The rest of this paragraph is filler for the sake of seeing the text wrap around the 150×150 image, which is left aligned.",
-        "secondParagraphText": "As you can see the should be some space above, below, and to the right of the image. The text should not be creeping on the image. Creeping is just not right. Images need breathing room too.",
-        "secondImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/left-img.jpg",
-        "thirdParagraph": "Let them speak like you words. Let them do their jobs without any hassle from the text. In about one more sentence here, we’ll see that the text moves from the right of the image down below the image in seamless transition. Again, letting the do it’s thang. Mission accomplished!",
-        "thirdParagraphText": "The rest of this paragraph is filler for the sake of seeing the text wrap around the 150×150 image, which is right aligned.",
-        "thirdImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/right-img.jpg",
-        "finalParagraph": "And that’s a wrap, yo! You survived the tumultuous waters of alignment. Image alignment achievement unlocked!"
-      }
+      "thumbnail": "avatar-9.jpg",
+      "description": "I am the new instructor to the block , and i am here to stay !"
     },
     {
-      "id": 2,
-      "title": "Getting started with React in 2020",
-      "related": false,
-      "time": 400,
-      "description": "Lorem ipsum dolor sit amet, accu msan in, tempor dictum nequrem ipsum...",
-      "author": {
-        "authorId": 1,
-        "thumbnail": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg",
-        "role": "Manager",
-        "name": "Andrew Jones"
-      },
-      "thumbnail": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/blogpost-6.jpg",
-      "topSection": {
-        "articleTitle": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elem entum velitnon tortor convallis variusa placerat nequhse. Quis eu Lorem irure magna. Ex labore reprehenderit veniam irure id nostrud velit. Minim aliquip cillum laborum qui Lorem eu.",
-        "paragraph": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elementum velitnon tortor convallis variusa placerat nequhse. Mauris varius ullamcorper tincidsellus egestas innisivel sollicituullam feugiate facilisis ones Suspendisse blandit sedtincinean.",
-        "quote": "Failure will never overtake me if my determination to succeed is strong enough.",
-        "quoteAuthor": "Andrew Jones"
-      },
-      "middleSection": {
-        "paragraph": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elem entum velitnon tortor convallis variusa placerat nequhse. Quis eu Lorem irure magna. Ex labore reprehenderit veniam irure id nostrud velit. Minim aliquip cillum laborum qui Lorem eu.",
-        "unorderedListTitle": "Unordered Lists (Nested)",
-        "unorderedList": "Lorem ipsum dolor sit amet",
-        "orderedListTitle": "Ordered List (Nested)",
-        "orderedList": "Lorem ipsum dolor sit amet"
-      },
-      "bottomSection": {
-        "title": "Image Alignment",
-        "firstParagraph": "Welcome to image alignment! The best way to demonstrate the ebb and flow of the various image positioning options is to nestle them snuggly among an ocean of words. Grab a paddle and let’s get started.",
-        "firstImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/center-img.jpg",
-        "secondParagraph": "The rest of this paragraph is filler for the sake of seeing the text wrap around the 150×150 image, which is left aligned.",
-        "secondParagraphText": "As you can see the should be some space above, below, and to the right of the image. The text should not be creeping on the image. Creeping is just not right. Images need breathing room too.",
-        "secondImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/left-img.jpg",
-        "thirdParagraph": "Let them speak like you words. Let them do their jobs without any hassle from the text. In about one more sentence here, we’ll see that the text moves from the right of the image down below the image in seamless transition. Again, letting the do it’s thang. Mission accomplished!",
-        "thirdParagraphText": "The rest of this paragraph is filler for the sake of seeing the text wrap around the 150×150 image, which is right aligned.",
-        "thirdImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/right-img.jpg",
-        "finalParagraph": "And that’s a wrap, yo! You survived the tumultuous waters of alignment. Image alignment achievement unlocked!"
-      }
-    },
-    {
+      "username": "John Adams",
+      "email": "johnadams@gmail.com",
+      "password": "test",
+      "bookmarks": [],
+      "enrolledCourses": [],
+      "firstName": "Maria",
+      "lastName": "Vergara",
+      "phone": "21312312",
+      "address": "fasfasfa",
+      "isInstructor": false,
       "id": 3,
-      "title": "Getting started with React in 2020",
-      "time": 400,
-      "related": true,
-      "description": "Lorem ipsum dolor sit amet, accu msan in, tempor dictum nequrem ipsum...",
-      "author": {
-        "authorId": 1,
-        "thumbnail": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg",
-        "role": "Manager",
-        "name": "Andrew Jones"
-      },
-      "thumbnail": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/blogpost-3.jpg",
-      "topSection": {
-        "articleTitle": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elem entum velitnon tortor convallis variusa placerat nequhse. Quis eu Lorem irure magna. Ex labore reprehenderit veniam irure id nostrud velit. Minim aliquip cillum laborum qui Lorem eu.",
-        "paragraph": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elementum velitnon tortor convallis variusa placerat nequhse. Mauris varius ullamcorper tincidsellus egestas innisivel sollicituullam feugiate facilisis ones Suspendisse blandit sedtincinean.",
-        "quote": "Failure will never overtake me if my determination to succeed is strong enough.",
-        "quoteAuthor": "Andrew Jones"
-      },
-      "middleSection": {
-        "paragraph": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elem entum velitnon tortor convallis variusa placerat nequhse. Quis eu Lorem irure magna. Ex labore reprehenderit veniam irure id nostrud velit. Minim aliquip cillum laborum qui Lorem eu.",
-        "unorderedListTitle": "Unordered Lists (Nested)",
-        "unorderedList": "Lorem ipsum dolor sit amet",
-        "orderedListTitle": "Ordered List (Nested)",
-        "orderedList": "Lorem ipsum dolor sit amet"
-      },
-      "bottomSection": {
-        "title": "Image Alignment",
-        "firstParagraph": "Welcome to image alignment! The best way to demonstrate the ebb and flow of the various image positioning options is to nestle them snuggly among an ocean of words. Grab a paddle and let’s get started.",
-        "firstImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/center-img.jpg",
-        "secondParagraph": "The rest of this paragraph is filler for the sake of seeing the text wrap around the 150×150 image, which is left aligned.",
-        "secondParagraphText": "As you can see the should be some space above, below, and to the right of the image. The text should not be creeping on the image. Creeping is just not right. Images need breathing room too.",
-        "secondImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/left-img.jpg",
-        "thirdParagraph": "Let them speak like you words. Let them do their jobs without any hassle from the text. In about one more sentence here, we’ll see that the text moves from the right of the image down below the image in seamless transition. Again, letting the do it’s thang. Mission accomplished!",
-        "thirdParagraphText": "The rest of this paragraph is filler for the sake of seeing the text wrap around the 150×150 image, which is right aligned.",
-        "thirdImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/right-img.jpg",
-        "finalParagraph": "And that’s a wrap, yo! You survived the tumultuous waters of alignment. Image alignment achievement unlocked!"
-      }
-    },
-    {
-      "id": 4,
-      "title": "Getting started with React in 2020",
-      "time": 400,
-      "related": false,
-      "description": "Lorem ipsum dolor sit amet, accu msan in, tempor dictum nequrem ipsum...",
-      "author": {
-        "authorId": 1,
-        "thumbnail": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg",
-        "role": "Manager",
-        "name": "Andrew Jones"
-      },
-      "thumbnail": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/blogpost-1.jpg",
-      "topSection": {
-        "articleTitle": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elem entum velitnon tortor convallis variusa placerat nequhse. Quis eu Lorem irure magna. Ex labore reprehenderit veniam irure id nostrud velit. Minim aliquip cillum laborum qui Lorem eu.",
-        "paragraph": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elementum velitnon tortor convallis variusa placerat nequhse. Mauris varius ullamcorper tincidsellus egestas innisivel sollicituullam feugiate facilisis ones Suspendisse blandit sedtincinean.",
-        "quote": "Failure will never overtake me if my determination to succeed is strong enough.",
-        "quoteAuthor": "Andrew Jones"
-      },
-      "middleSection": {
-        "paragraph": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elem entum velitnon tortor convallis variusa placerat nequhse. Quis eu Lorem irure magna. Ex labore reprehenderit veniam irure id nostrud velit. Minim aliquip cillum laborum qui Lorem eu.",
-        "unorderedListTitle": "Unordered Lists (Nested)",
-        "unorderedList": "Lorem ipsum dolor sit amet",
-        "orderedListTitle": "Ordered List (Nested)",
-        "orderedList": "Lorem ipsum dolor sit amet"
-      },
-      "bottomSection": {
-        "title": "Image Alignment",
-        "firstParagraph": "Welcome to image alignment! The best way to demonstrate the ebb and flow of the various image positioning options is to nestle them snuggly among an ocean of words. Grab a paddle and let’s get started.",
-        "firstImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/center-img.jpg",
-        "secondParagraph": "The rest of this paragraph is filler for the sake of seeing the text wrap around the 150×150 image, which is left aligned.",
-        "secondParagraphText": "As you can see the should be some space above, below, and to the right of the image. The text should not be creeping on the image. Creeping is just not right. Images need breathing room too.",
-        "secondImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/left-img.jpg",
-        "thirdParagraph": "Let them speak like you words. Let them do their jobs without any hassle from the text. In about one more sentence here, we’ll see that the text moves from the right of the image down below the image in seamless transition. Again, letting the do it’s thang. Mission accomplished!",
-        "thirdParagraphText": "The rest of this paragraph is filler for the sake of seeing the text wrap around the 150×150 image, which is right aligned.",
-        "thirdImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/right-img.jpg",
-        "finalParagraph": "And that’s a wrap, yo! You survived the tumultuous waters of alignment. Image alignment achievement unlocked!"
-      }
-    },
-    {
-      "id": 5,
-      "title": "Getting started with React in 2020",
-      "time": 400,
-      "related": true,
-      "description": "Lorem ipsum dolor sit amet, accu msan in, tempor dictum nequrem ipsum...",
-      "author": {
-        "authorId": 1,
-        "thumbnail": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg",
-        "role": "Manager",
-        "name": "Andrew Jones"
-      },
-      "thumbnail": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/blogpost-5.jpg",
-      "topSection": {
-        "articleTitle": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elem entum velitnon tortor convallis variusa placerat nequhse. Quis eu Lorem irure magna. Ex labore reprehenderit veniam irure id nostrud velit. Minim aliquip cillum laborum qui Lorem eu.",
-        "paragraph": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elementum velitnon tortor convallis variusa placerat nequhse. Mauris varius ullamcorper tincidsellus egestas innisivel sollicituullam feugiate facilisis ones Suspendisse blandit sedtincinean.",
-        "quote": "Failure will never overtake me if my determination to succeed is strong enough.",
-        "quoteAuthor": "Andrew Jones"
-      },
-      "middleSection": {
-        "paragraph": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elem entum velitnon tortor convallis variusa placerat nequhse. Quis eu Lorem irure magna. Ex labore reprehenderit veniam irure id nostrud velit. Minim aliquip cillum laborum qui Lorem eu.",
-        "unorderedListTitle": "Unordered Lists (Nested)",
-        "unorderedList": "Lorem ipsum dolor sit amet",
-        "orderedListTitle": "Ordered List (Nested)",
-        "orderedList": "Lorem ipsum dolor sit amet"
-      },
-      "bottomSection": {
-        "title": "Image Alignment",
-        "firstParagraph": "Welcome to image alignment! The best way to demonstrate the ebb and flow of the various image positioning options is to nestle them snuggly among an ocean of words. Grab a paddle and let’s get started.",
-        "firstImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/center-img.jpg",
-        "secondParagraph": "The rest of this paragraph is filler for the sake of seeing the text wrap around the 150×150 image, which is left aligned.",
-        "secondParagraphText": "As you can see the should be some space above, below, and to the right of the image. The text should not be creeping on the image. Creeping is just not right. Images need breathing room too.",
-        "secondImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/left-img.jpg",
-        "thirdParagraph": "Let them speak like you words. Let them do their jobs without any hassle from the text. In about one more sentence here, we’ll see that the text moves from the right of the image down below the image in seamless transition. Again, letting the do it’s thang. Mission accomplished!",
-        "thirdParagraphText": "The rest of this paragraph is filler for the sake of seeing the text wrap around the 150×150 image, which is right aligned.",
-        "thirdImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/right-img.jpg",
-        "finalParagraph": "And that’s a wrap, yo! You survived the tumultuous waters of alignment. Image alignment achievement unlocked!"
-      }
-    },
-    {
-      "id": 6,
-      "title": "Getting started with React in 2020",
-      "time": 400,
-      "description": "Lorem ipsum dolor sit amet, accu msan in, tempor dictum nequrem ipsum...",
-      "related": true,
-      "author": {
-        "authorId": 1,
-        "thumbnail": "https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg",
-        "role": "Manager",
-        "name": "Andrew Jones"
-      },
-      "thumbnail": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/blogpost-5.jpg",
-      "topSection": {
-        "articleTitle": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elem entum velitnon tortor convallis variusa placerat nequhse. Quis eu Lorem irure magna. Ex labore reprehenderit veniam irure id nostrud velit. Minim aliquip cillum laborum qui Lorem eu.",
-        "paragraph": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elementum velitnon tortor convallis variusa placerat nequhse. Mauris varius ullamcorper tincidsellus egestas innisivel sollicituullam feugiate facilisis ones Suspendisse blandit sedtincinean.",
-        "quote": "Failure will never overtake me if my determination to succeed is strong enough.",
-        "quoteAuthor": "Andrew Jones"
-      },
-      "middleSection": {
-        "paragraph": "Condimentum leo utipsum euismod feugiatn elntum sapiennonser variusmi elementum necunc elem entum velitnon tortor convallis variusa placerat nequhse. Quis eu Lorem irure magna. Ex labore reprehenderit veniam irure id nostrud velit. Minim aliquip cillum laborum qui Lorem eu.",
-        "unorderedListTitle": "Unordered Lists (Nested)",
-        "unorderedList": "Lorem ipsum dolor sit amet",
-        "orderedListTitle": "Ordered List (Nested)",
-        "orderedList": "Lorem ipsum dolor sit amet"
-      },
-      "bottomSection": {
-        "title": "Image Alignment",
-        "firstParagraph": "Welcome to image alignment! The best way to demonstrate the ebb and flow of the various image positioning options is to nestle them snuggly among an ocean of words. Grab a paddle and let’s get started.",
-        "firstImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/center-img.jpg",
-        "secondParagraph": "The rest of this paragraph is filler for the sake of seeing the text wrap around the 150×150 image, which is left aligned.",
-        "secondParagraphText": "As you can see the should be some space above, below, and to the right of the image. The text should not be creeping on the image. Creeping is just not right. Images need breathing room too.",
-        "secondImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/left-img.jpg",
-        "thirdParagraph": "Let them speak like you words. Let them do their jobs without any hassle from the text. In about one more sentence here, we’ll see that the text moves from the right of the image down below the image in seamless transition. Again, letting the do it’s thang. Mission accomplished!",
-        "thirdParagraphText": "The rest of this paragraph is filler for the sake of seeing the text wrap around the 150×150 image, which is right aligned.",
-        "thirdImage": "https://codescandy.com/geeks-bootstrap-5/assets/images/blog/right-img.jpg",
-        "finalParagraph": "And that’s a wrap, yo! You survived the tumultuous waters of alignment. Image alignment achievement unlocked!"
-      }
+      "thumbnail": "avatar-3.jpg"
     }
   ]
 }

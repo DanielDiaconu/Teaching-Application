@@ -11,6 +11,8 @@ const newUser = {
   lastName: "",
   phone: "",
   address: "",
+  isInstructor: false,
+  thumbnail: "avatar-1.jpg",
 };
 
 function SignUp() {
@@ -30,7 +32,7 @@ function SignUp() {
       },
     });
     let data = await res.json();
-    // sessionStorage.setItem("user", JSON.stringify(data));
+    sessionStorage.setItem("user", JSON.stringify(data));
     history.push("/signin");
   };
 

@@ -21,7 +21,6 @@ function CourseEnroll({ course, toggleEnrollCourse }) {
             <div className="card-body">
               <div className="mb-3">
                 <span className="text-dark fw-bold h2">${course.price}</span>
-                <del className="fs-4 text-muted">$750</del>
               </div>
               {user && (
                 <>

@@ -27,6 +27,7 @@ function UserEditProfile({ onAvatarChange }) {
     );
     setAvatarImg(currentAvatar);
   };
+
   const generateNewAvatar = () => {
     if (avatarImg < 9) {
       return setAvatarImg((prev) => prev + 1);
@@ -37,24 +38,16 @@ function UserEditProfile({ onAvatarChange }) {
 
   const submitUserEditInformation = async (e) => {
     e.preventDefault();
+    const payload = { ...userEditInfo, thumbnail: Avatars[avatarImg] };
     await axios.patch(
       `http://localhost:8000/users/${userStorage.id}`,
-      {
-        ...userEditInfo,
-        thumbnail: Avatars[avatarImg],
-      },
+      payload,
       {
         headers: { "Content-type": "application/json; charset = UTF-8" },
       }
     );
-    sessionStorage.setItem(
-      "user",
-      JSON.stringify({
-        ...userEditInfo,
-        thumbnail: Avatars[avatarImg],
-      })
-    );
-    onAvatarChange(userEditInfo);
+    sessionStorage.setItem("user", JSON.stringify(payload));
+    onAvatarChange(payload);
   };
 
   useEffect(() => {

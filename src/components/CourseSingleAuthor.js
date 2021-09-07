@@ -13,7 +13,7 @@ function CourseSingleAuthor({ course }) {
 
   useEffect(() => {
     fetchUser();
-  }, []);
+  }, [course]);
 
   return (
     <div className="card">

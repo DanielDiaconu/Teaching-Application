@@ -106,9 +106,7 @@ function CourseCard({ course, toggleBookmark, onBookmarkRemove }) {
                 />
                 <span className="ml-5">{course.authorName}</span>
               </div>
-              <div className="col ms-2">
-                <span>{course.reviews.author}</span>
-              </div>
+              <div className="col ms-2"></div>
               {location.pathname === "/user/dashboard/bookmarks" && (
                 <div className="col-auto mr-5" onClick={removeBookmark}>
                   <BsFillTrash2Fill />

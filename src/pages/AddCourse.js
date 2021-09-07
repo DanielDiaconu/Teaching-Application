@@ -57,18 +57,32 @@ function AddCourse() {
         ...newCourse,
         reviews: [],
         authorId: user.id,
-        authorImage: user.thumbnail,
-        authorName: `${user.firstName} ${user.lastName}`,
-
         students: [],
         rating: 5,
         time: calculateCourseRuntime(),
-        authorName: user.username,
       },
       {
         headers: { "Content-type": "application/json; charset=UTF-8" },
       }
     );
+    if (!user.isInstructor) {
+      await axios.patch(
+        `http://localhost:8000/users/${user.id}`,
+        {
+          isInstructor: true,
+        },
+        {
+          headers: { "Content-type": "application/json; charset=UTF-8" },
+        }
+      );
+      sessionStorage.setItem(
+        "user",
+        JSON.stringify({
+          ...user,
+          isInstructor: true,
+        })
+      );
+    }
     history.push("/");
   };
 
@@ -99,7 +113,6 @@ function AddCourse() {
 
   return (
     <>
-      <Prompt message="You have unsaved changes, are you sure you want to leave?" />
       <AddCourseHeader />
       <div className="pb-12">
         <div className="container">
