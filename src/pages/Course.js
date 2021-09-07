@@ -76,7 +76,8 @@ function Course() {
       {
         ...review,
         date: new Date().toString(),
-        author: user.username,
+        authorName: `${user.firstName} ${user.lastName}`,
+        authorAvatar: user.thumbnail,
         id: Math.floor(Math.random() * 1000),
         likes: 0,
         hasLiked: [],

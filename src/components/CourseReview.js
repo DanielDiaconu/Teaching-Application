@@ -32,10 +32,14 @@ export default function CourseReview({
     <>
       {review && (
         <div className="d-flex border-bottom pb-4 mb-4">
-          <img src={Avatar} alt="" className="rounded-circle avatar-lg" />
+          <img
+            src={`/images/courses/avatars/${review.authorAvatar}`}
+            alt=""
+            className="rounded-circle avatar-lg"
+          />
           <div className=" ms-3">
             <h4 className="mb-1">
-              {review.author}
+              {review.authorName}
               <span className="ms-1 fs-6 text-muted">{parseDate()}</span>
               <span className="ml-15">
                 {review.likes}

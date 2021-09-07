@@ -6,26 +6,7 @@
       "time": 36000,
       "name": "Intro to JS : An introduction to Modern JavaScript",
       "description": "If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.",
-      "reviews": [
-        {
-          "body": "New review !",
-          "rating": "5",
-          "date": "Mon Aug 30 2021 19:50:35 GMT+0300 (Eastern European Summer Time)",
-          "author": "Daniel Adrian",
-          "id": 740,
-          "likes": 0,
-          "hasLiked": []
-        },
-        {
-          "body": "Another review !",
-          "rating": "3",
-          "date": "Mon Aug 30 2021 19:50:44 GMT+0300 (Eastern European Summer Time)",
-          "author": "Daniel Adrian",
-          "id": 318,
-          "likes": 0,
-          "hasLiked": []
-        }
-      ],
+      "reviews": [],
       "authorId": 2,
       "students": [
         1,
@@ -33,7 +14,7 @@
       ],
       "level": "Intermediate",
       "authorName": "Daniel Adrian",
-      "rating": 4,
+      "rating": null,
       "category": "JavaScript",
       "thumbnail": "course-javascript.jpg",
       "chapters": [
@@ -130,23 +111,13 @@
       "time": 72000,
       "name": "Angular : The complete guide",
       "description": "If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.",
-      "reviews": [
-        {
-          "body": "There has been a very bad choice of wording in this sentence !!",
-          "rating": "1",
-          "date": "Tue Aug 24 2021 16:59:44 GMT+0300 (Eastern European Summer Time)",
-          "author": "Daniel Diaconu",
-          "id": 480,
-          "likes": 0,
-          "hasLiked": []
-        }
-      ],
+      "reviews": [],
       "authorId": 2,
       "students": [
         1
       ],
       "level": "Intermediate",
-      "rating": 1,
+      "rating": null,
       "category": "Angular",
       "thumbnail": "course-angular.jpg",
       "chapters": [
@@ -256,13 +227,26 @@
       "time": 412410,
       "name": "CSS3: Ultimate CSS3 course for begginers",
       "description": "If you’re learning to program for the first time, or if you’re coming from a different language, this course, JavaScript: Getting Started, will give you the basics for coding in JavaScript. First, you'll discover the types of applications that can be built with JavaScript, and the platforms they’ll run on.",
-      "reviews": [],
+      "reviews": [
+        {
+          "body": "This is here just for testing purpouses !",
+          "rating": "3",
+          "date": "Tue Sep 07 2021 14:32:42 GMT+0300 (Eastern European Summer Time)",
+          "authorName": "First User",
+          "authorAvatar": "avatar-4.jpg",
+          "id": 998,
+          "likes": 1,
+          "hasLiked": [
+            1
+          ]
+        }
+      ],
       "authorId": 1,
       "students": [
         1
       ],
       "level": "Beginner",
-      "rating": 4,
+      "rating": 3,
       "category": "CSS3",
       "thumbnail": "course-css.jpg",
       "chapters": [
@@ -401,7 +385,6 @@
       "password": "test",
       "isInstructor": true,
       "bookmarks": [
-        8,
         5,
         6
       ],
