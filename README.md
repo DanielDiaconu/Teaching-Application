@@ -25,10 +25,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Print-Screens
 
- 
-![signIn](./public/printscreens/sign_in.png)
-
-![signUp](./public/printscreens/sign_up.png)
 
 ![homepage](./public/printscreens/home1.png)
 
@@ -47,6 +43,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ![signIn](./public/printscreens/addcourse_thumbnail.png)
 
 ![signIn](./public/printscreens/addcourse_curriculum.png)
+
+![signIn](./public/printscreens/sign_in.png)
+
+![signUp](./public/printscreens/sign_up.png)
 
 
 
